@@ -1,0 +1,26 @@
+Main Drive class
+    Has UUID, Name, Size
+
+PhysicalDrive class
+    Extends Drive class
+    Has all in Drive class and nothing else
+
+PhysicalVolume class
+    Extends the Drive class
+    Has all in Drive class
+    Has linked PhysicalDrive
+    Size comes from PhysicalDrive
+
+VolumeGroup class
+    Extends the Drive class
+    Has all in Drive class
+    Has total size
+    Has linked list of PhysicalVolumes
+    Has linked list of LogicalVolumes
+    Total size comes from the combined size of all the PhysicalVolumes
+    Available space comes from (total size) minus (combined size of all LogicalVolumes)
+
+LogicalVolumes class
+    Extends the Drive class
+    Has all in Drive class
+    Has linked VolumeGroup
