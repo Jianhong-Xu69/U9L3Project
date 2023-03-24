@@ -1,8 +1,12 @@
-public class PhysicalVolume extends Drive {
-    private PhysicalDrive linked;
+public class PhysicalVolume extends LinkDrive {
+    private HardDrive link;
 
-    public PhysicalVolume (String uu, String na, PhysicalDrive li) {
+    //Precondition HardDrive is not already linked
+    public PhysicalVolume (String uu, String na, HardDrive li) {
         super(uu, na, li.getSize());
-        linked = li;
+        link = li;
+        link.setLinked(true);
     }
+
+
 }

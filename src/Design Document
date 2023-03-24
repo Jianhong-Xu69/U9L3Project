@@ -1,18 +1,25 @@
 Main Drive class
-    Has UUID, Name, Size
+    Has UUID, Name, Size (DONE)
 
-PhysicalDrive class
-    Extends Drive class
-    Has all in Drive class and nothing else
+LinkDrive class
+    Extends Drive class (DONE)
+    Has all in Drive class (DONE)
+    Has linked (DONE)
+
+HardDrive class
+    Extends LinkDrive class (DONE)
+    Has all in Drive class and nothing else (DONE)
+    Detects if already linked to a PhysicalVolume (DONE)
 
 PhysicalVolume class
-    Extends the Drive class
-    Has all in Drive class
-    Has linked PhysicalDrive
-    Size comes from PhysicalDrive
+    Extends the LinkDrive class (DONE)
+    Has all in Drive class (DONE)
+    Has linked HardDrive (DONE)
+    Size comes from HardDrive (DONE)
+    Detects if already linked to a VolumeGroup (DONE)
 
 VolumeGroup class
-    Extends the Drive class
+    Extends the Drive class (DONE)
     Has all in Drive class
     Has total size
     Has linked list of PhysicalVolumes
