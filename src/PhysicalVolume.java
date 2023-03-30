@@ -8,5 +8,8 @@ public class PhysicalVolume extends LinkDrive {
         link.setLinked(true);
     }
 
-
+    @Override
+    public String toString() {
+        return super.getName() + ":[" + super.getSize() + "G] [" + super.getUuid() + "]";
+    }
 }

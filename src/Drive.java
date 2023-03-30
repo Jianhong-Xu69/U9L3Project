@@ -28,4 +28,9 @@ public class Drive {
     public void setSize(int size) {
         this.size = size;
     }
+
+    @Override
+    public String toString() {
+        return name + " [" + size + "G] [" + uuid + "]";
+    }
 }
